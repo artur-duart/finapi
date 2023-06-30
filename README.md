@@ -1,25 +1,25 @@
-## FinAPI - Financeira
+## FinAPI - Financial
 
 ---
 
-## Requisitos
+## Requirements
 
-- [X] Deve ser possível criar uma conta
-- [ ] Deve ser possível buscar o extrato bancário do cliente
-- [ ] Deve ser possível realizar um depósito
-- [ ] Deve ser possível realizar um saque
-- [ ] Deve ser possível buscar o extrato bancário do cliente por data
-- [ ] Deve ser possível atualizar dados da conta do cliente
-- [ ] Deve ser possível obter dados da conta do cliente
-- [ ] Deve ser possível deletar uma conta
+- [X] It must be possible to create an account
+- [ ] It must be possible to fetch the customer's bank statement
+- [ ] It must be possible to make a deposit
+- [ ] It must be possible to perform a withdrawal
+- [ ] It should be possible to search the customer's bank statement by date
+- [ ] It must be possible to update customer account data
+- [ ] It must be possible to obtain customer account data
+- [ ] It must be possible to delete an account
 
 ---
 
-### Regras de negócio
+### Business rules
 
-- [X] Não deve ser possível cadastrar uma conta com CPF já existente
-- [ ] Não deve ser possível fazer depósito em uma conta não existente
-- [ ] Não deve ser possível buscar extrato em uma conta não existente
-- [ ] Não deve ser possível fazer saque em uma conta não existente
-- [ ] Não deve ser possível excluir uma conta não existente
-- [ ] Não deve ser possível fazer saque quando o saldo for insuficiente
+- [X] It must not be possible to register an account with an existing CPF
+- [ ] It must not be possible to deposit into a non-existing account
+- [ ] It must not be possible to fetch a statement in a non-existing account
+- [ ] It should not be possible to withdraw to a non-existing account
+- [ ] It should not be possible to delete a non-existing account
+- [ ] It should not be possible to withdraw when the balance is insufficient
