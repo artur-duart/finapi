@@ -18,7 +18,7 @@
 ### Business rules
 
 - [X] It must not be possible to register an account with an existing CPF
-- [ ] It must not be possible to deposit into a non-existing account
+- [X] It must not be possible to deposit into a non-existing account
 - [ ] It must not be possible to fetch a statement in a non-existing account
 - [ ] It should not be possible to withdraw to a non-existing account
 - [ ] It should not be possible to delete a non-existing account
