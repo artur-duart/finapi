@@ -5,7 +5,7 @@
 ## Requirements
 
 - [X] It must be possible to create an account
-- [ ] It must be possible to fetch the customer's bank statement
+- [X] It must be possible to fetch the customer's bank statement
 - [ ] It must be possible to make a deposit
 - [ ] It must be possible to perform a withdrawal
 - [ ] It should be possible to search the customer's bank statement by date
