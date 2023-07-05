@@ -7,6 +7,7 @@ app.use(express.json());
 const port = 3333;
 
 const customers = [];
+
 // Middleware
 function verifyIfExistsAccountCPF(req, res, next) {
 	const { cpf } = req.headers;
@@ -25,7 +26,7 @@ function verifyIfExistsAccountCPF(req, res, next) {
 
 function getBalance(statement) {
 	const balance = statement.reduce((acc, operation) => {
-		if (operation.type === 'credit') {
+		if (operation.type === 'deposit') {
 			return acc + operation.amount;
 		} else {
 			return acc - operation.amount;
@@ -70,7 +71,7 @@ app.post('/deposit', verifyIfExistsAccountCPF, (req, res) => {
 		description,
 		amount,
 		created_at: new Date(),
-		type: 'credit',
+		type: 'deposit',
 	};
 
 	customer.statement.push(statementOperartion);
@@ -93,12 +94,21 @@ app.post('/withdraw', verifyIfExistsAccountCPF, (req, res) => {
 	const statementOperartion = {
 		amount,
 		created_at: new Date(),
-		type: 'debit',
+		type: 'withdraw',
 	};
 
 	customer.statement.push(statementOperartion);
 
 	return res.status(201).send();
+});
+
+app.get('/statement/date', verifyIfExistsAccountCPF, (req, res) => {
+	const { customer } = req;
+	const { date } = req.query;
+	const dateFormat = new Date(date + "00:00");
+	const statement = customer.statement.filter
+
+	return res.json(customer.statement);
 });
 
 app.listen(port);
