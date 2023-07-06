@@ -11,7 +11,8 @@
 - [X] It should be possible to search the customer's bank statement by date
 - [X] It must be possible to update customer account data
 - [X] It must be possible to obtain customer account data
-- [ ] It must be possible to delete an account
+- [X] It must be possible to delete an account
+- [X] It must be possible to return the balance
 
 ---
 
@@ -22,4 +23,4 @@
 - [X] It must not be possible to fetch a statement in a non-existing account
 - [X] It should not be possible to withdraw to a non-existing account
 - [X] It should not be possible to withdraw when the balance is insufficient
-- [ ] It should not be possible to delete a non-existing account
+- [X] It should not be possible to delete a non-existing account

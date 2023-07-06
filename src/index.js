@@ -8,7 +8,6 @@ const port = 3333;
 
 const customers = [];
 
-// Middleware
 function verifyIfExistsAccountCPF(req, res, next) {
 	const { cpf } = req.headers;
 	const customer = customers.find((customer) => customer.cpf === cpf);
@@ -127,6 +126,23 @@ app.put('/account', verifyIfExistsAccountCPF, (req, res) => {
 app.get('/account', verifyIfExistsAccountCPF, (req, res) => {
 	const { customer } = req;
 	return res.json(customer);
+});
+
+app.delete('/account', verifyIfExistsAccountCPF, (req, res) => {
+	const { customer } = req;
+	const index = customers.indexOf(customer);
+
+	customers.splice(index, 1);
+
+	return res.status(200).json(customers);
+});
+
+app.get('/balance', verifyIfExistsAccountCPF, (req, res) => {
+	const { customer } = req;
+
+	const balance = getBalance(customer.statement);
+
+	return res.json(balance);
 });
 
 app.listen(port);
