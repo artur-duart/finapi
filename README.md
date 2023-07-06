@@ -9,8 +9,8 @@
 - [X] It must be possible to make a deposit
 - [X] It must be possible to perform a withdrawal
 - [X] It should be possible to search the customer's bank statement by date
-- [ ] It must be possible to update customer account data
-- [ ] It must be possible to obtain customer account data
+- [X] It must be possible to update customer account data
+- [X] It must be possible to obtain customer account data
 - [ ] It must be possible to delete an account
 
 ---
